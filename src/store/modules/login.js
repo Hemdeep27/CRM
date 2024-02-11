@@ -27,7 +27,6 @@ export default {
       const res = await axios.post("/api/admin/login", details);
       console.log(res);
       localStorage.setItem("id", res.data);
-      //   localStorage.setItem("status", res.status);
       success(res);
       commit("setLoginState", res);
       commit("setLoginBool", true);
